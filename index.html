@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/estilos.css">
+   
+    <title>Caclular perdida de carga</title>
+</head>
+<body class="grid-container">
+    <div class="container">
+        <div class="TITULO-Y-PORTADA">
+            <p class="titulo"> CALCULA LA PERDIDA DE CARGA
+
+            </p>
+            <P class="des"> En esta pagina web podrás calcular la perdida de carga en una tubería, tan solo
+                suministrando las variables pedidas: Longitud de la tubería, Velocidad del fluido y el diametro interior
+                de la tubería.
+            </P>
+
+            
+        </div>
+        <div class="VARIABLES">
+            <div class="login-box">
+                <p class="ti">Ingresa las variables
+
+                </p>
+                <form>
+                  <div class="user-box">
+                    <input  step="any" type="number" pattern="[0-9,.]+" id="L" required >
+                    <label>Longitud de tuberia</label>
+                    <select  id="Longitud">
+                        <option value="0">Metros</option>
+                        <option value="1">Centimetros</option>
+                        <option value="2">Milimetro</option>
+                        <option value="3">Pies</option>
+                        <option value="4">Pulgadas</option>
+                    </select>
+                  </div>
+                  <div class="user-box">
+                    <input step="any" type="number" pattern="[0-9,.]+" id="V" required>
+                    <label>Velocidad</label>
+                    <select  id="V1">
+                        <option value="0">Metros</option>
+                        <option value="1">Centimetros</option>
+                        <option value="2">Milimetro</option>
+                        <option value="3">Pies</option>
+                        <option value="4">Pulgadas</option>
+                    </select>
+                    <select  id="V2">
+                        <option value="0">Segundos</option>
+                        <option value="1">Minutos</option>
+                    </select>   
+                  </div>
+                  <div class="user-box">
+                    <input  step="any" type="number" pattern="[0-9,.]+" id="D" required>
+                    <label>Diametro interior</label>
+                    <select  id="Diametro">
+                        <option value="0">Metros</option>
+                        <option value="1">Centimetros</option>
+                        <option value="2">Milimetro</option>
+                        <option value="3">Pies</option>
+                        <option value="4">Pulgadas</option>
+                    </select>
+                  </div>
+                <a href="#">
+                    <button onclick="mostrar_inputs()" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Calcular
+                      </button>
+                </a>
+                 
+                </form>
+                
+              </div>
+        </div>
+
+        <div class="PIEDEPAGINA">
+            <p> Elaborado por: Oscar Andrés Córdoba
+                
+            </p>
+            <p>Materia: Procesos industriales 2023-1</p>
+        </div>
+      </div>
+      
+      
+</body>
+<script src="/programa.js">
+
+
+</script>
+</html>
+
