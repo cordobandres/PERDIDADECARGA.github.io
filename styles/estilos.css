@@ -37,38 +37,29 @@ body {
   background-image: url(../styles/ab1d74313515e118cfb620ce67fc719d.jpg);
 }
 
-.container {  display: grid;
+.container {  display: flex;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3.3fr 0.4fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  justify-content: space-around;
   justify-items: center;
   align-items: stretch;
   grid-template-areas:
+  
     "TITULO-Y-PORTADA"
-    "VARIABLES"
-    "PIEDEPAGINA";
+    "PIEDEPAGINA"
+    "VARIABLES";
 
 }
-
-.TITULO-Y-PORTADA { grid-area: TITULO-Y-PORTADA; }
-
-.PIEDEPAGINA { grid-area: PIEDEPAGINA; }
-
-.VARIABLES { grid-area: VARIABLES; }
-
 
 
 .PIEDEPAGINA { 
   grid-area: PIEDEPAGINA; 
+  margin-top: 2CM;
   background-color: #939EC3;
   box-sizing: border-box;
   border-radius: 15px;
   text-align: center;
-  margin-top: 1cm;
-  padding-top: 1cm;
-  padding-bottom: 1cm;
   border: solid #73448D;
 
 }
@@ -165,7 +156,7 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  
   letter-spacing: 3px
 }
 
@@ -183,7 +174,7 @@ body {
 .login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
-  width: 80%;
+  
   height: 2px;
   background: linear-gradient(90deg, transparent, #fff);
   animation: btn-anim1 1.5s linear infinite;
@@ -203,7 +194,7 @@ body {
   top: -100%;
   right: 0;
   width: 2px;
-  height: 80%;
+  height: 40%;
   background: linear-gradient(180deg, transparent, #fff);
   animation: btn-anim2 1.5s linear infinite;
   animation-delay: .375s
