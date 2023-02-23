@@ -34,7 +34,7 @@ html {
 
 body {
   min-height: 100%;
-  background-image: url(/ab1d74313515e118cfb620ce67fc719d.jpg);
+  background-image: url(../styles/ab1d74313515e118cfb620ce67fc719d.jpg);
 }
 
 .container {  display: grid;
