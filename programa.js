@@ -64,10 +64,10 @@ function mostrar_inputs(){
             let f = 0.02;
             let f_old = f;
             let error = 1;
-            const maxIterations = 10;
+            const maxIterations = 15;
             let i = 0;
         
-            while (error > 1 || i < maxIterations) {
+            while (error > 1 ) {
                 const A = -2 * Math.log10((epsilon / D) / 3.7 + (2.51 / (Re * Math.sqrt(f))));
                 const B = 1 / Math.sqrt(f);
                 let df = -1 / (2 * Math.sqrt(f) * (Math.log(10) / 2) * (epsilon / D / 3.7 + 2.51 / (Re * Math.sqrt(f))));
@@ -95,10 +95,12 @@ function mostrar_inputs(){
         var perdida1 = friccion*(valoresDemedida[0]/valoresDemedida[1])*((Math.pow(Velocidad,2)/(2*9.81)))
     }
     else{
-        const f = colebrookWhite(Re, D, ValR);
-        var perdida1 = f*(valoresDemedida[0]/valoresDemedida[1])*((Math.pow(Velocidad,2)/(2*9.81)))
+        const friccion = colebrookWhite(Re, D, ValR);
+        var perdida1 = friccion*(valoresDemedida[0]/valoresDemedida[1])*((Math.pow(Velocidad,2)/(2*9.81)))
     
-    window.alert("La perdida de carga es:   " + perdida1)
+    window.alert("La perdida de carga es:   " + perdida1 +
+    "  El Reynolds es:   " + Re + "  La fricción es:   " + friccion)
+
     }
     debugger;
 
