@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles/estilos.css">
    
     <title>Calcular perdida de carga</title>
+    
+    
+    
+    
+
+
+
 </head>
 <body class="grid-container">
     <div class="container">
@@ -64,8 +71,26 @@
                         <option value="4">Pulgadas</option>
                     </select>
                   </div>
+                  <div class="user-box">
+                    <input  step="any" type="number" pattern="[0-9,.]+" id="DL" required>
+                    <label>Densidad del liquido</label>
+                    <select  id="Densidad">
+                      <option value="0">Kg/m3</option>
+                    </select>
+                  </div>
+                  <div class="user-box">
+                    <input  step="any" type="number" pattern="[0-9,.]+" id="V" required>
+                    <label>Viscosidad Dinámica</label>
+                    <select  id="Viscosidad">
+                      <option value="0">Pa*s</option>
+                    </select>
+                  </div>
+                  <div class="user-box">
+                    <input  step="any" type="number" pattern="[0-9,.]+" id="R" required>
+                    <label>Rugosidad Absoluta</label>
+                  </div>
                 <a href="#">
-                    <button onclick="mostrar_inputs()" >
+                    <button onclick="mostrar_inputs()"  >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -92,9 +117,9 @@
       </div>
       
 </body>
-<script src="/programa.js">
 
 
-</script>
+<script src="programa.js"> </script>
+
 </html>
 
