@@ -97,8 +97,8 @@ function mostrar_inputs(){
     else{
         const f = colebrookWhite(Re, D, ValR);
         var perdida1 = f*(valoresDemedida[0]/valoresDemedida[1])*((Math.pow(Velocidad,2)/(2*9.81)))
-    console.log(`El factor de fricción es: ${f}`);
-    console.log(`La perdida de carga es: ${perdida1}`);    
+    
+    window.alert("La perdida de carga es:   " + perdida1)
     }
     debugger;
 
