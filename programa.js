@@ -64,22 +64,20 @@ function mostrar_inputs(){
             let f = 0.02;
             let f_old = f;
             let error = 1;
-            const maxIterations = 15;
-            let i = 0;
-        
+            
             while (error > 1 ) {
                 const A = -2 * Math.log10((epsilon / D) / 3.7 + (2.51 / (Re * Math.sqrt(f))));
                 const B = 1 / Math.sqrt(f);
                 let df = -1 / (2 * Math.sqrt(f) * (Math.log(10) / 2) * (epsilon / D / 3.7 + 2.51 / (Re * Math.sqrt(f))));
             
                 if (Math.abs(df) < 1e-10) { // verificar si el denominador es cercano a cero
-                df = Math.sign(df) * 1e-10; // establecer la derivada en un valor pequeño pero no nulo
+                    df = Math.sign(df) * 1e-10; // establecer la derivada en un valor pequeño pero no nulo
                 }
             
                 f_old = f;
                 f = f - (A - B) / df;
                 error = Math.abs((f - f_old) / f_old);
-                i++;
+                
             }
         
             return f;
@@ -87,7 +85,7 @@ function mostrar_inputs(){
     
         //CALCULO DE REGIMEN LAMINAR//
 
-    var Re = (ValDL*Velocidad*valoresDemedida[1])/ValV
+    var Re = (Velocidad*valoresDemedida[1])/ValV
     var x = (((ValR)/(valoresDemedida[1])/(3.71))+((5.74)/(Math.pow(Re,0.9))))
     const D = valoresDemedida[1]
     if (Re>2100){
@@ -98,10 +96,12 @@ function mostrar_inputs(){
         const friccion = colebrookWhite(Re, D, ValR);
         var perdida1 = friccion*(valoresDemedida[0]/valoresDemedida[1])*((Math.pow(Velocidad,2)/(2*9.81)))
     
-    window.alert("La perdida de carga es:   " + perdida1 +
-    "  El Reynolds es:   " + Re + "  La fricción es:   " + friccion)
+    
 
     }
+
+    window.alert("La perdida de carga es:   " + perdida1 +
+    "  El Reynolds es:   " + Re + "  La fricción es:   " + friccion)
     debugger;
 
 
